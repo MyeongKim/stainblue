@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+
+    <style>
+        body{
+            background-image: url("http://fc05.deviantart.net/fs70/i/2012/248/e/9/background_pastel_promise_by_quaddles_roost-d5dnxql.jpg");
+            background-size: cover;
+            font-family: 'Indie Flower', cursive;
+        }
+        .mynav{
+            width:60%;
+            height:200px;
+            background-color:white;
+            margin:0 auto;
+
+        }
+        .twitter{
+            line-height: 40px;
+            background-color:cornflowerblue;
+            height: 60px;
+            text-align: center;
+
+        }
+        .mytitle{
+            text-align: right;
+            font-size: 50px;
+        }
+        .mynav_detail{
+            text-align: right;
+            font-size: 20px;
+        }
+        .mycontent{
+            padding-left: 100px;
+            padding-top: 100px;
+            font-size: large;
+            font-family: 'Nanum Gothic', serif;
+            background-color: white;
+            height: auto;
+        }
+
+        a{
+            color: darkslategrey;
+        }
+        a:active{
+            color: darkgray;
+        }
+        a:hover{
+            color: darkgray;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="mynav">
+    <div class="mytitle">
+        <a href="#">StainBlue</a>
+    </div>
+    <div class="twitter">
+        "twitter"
+    </div>
+    <div class="mynav_detail">
+        <a href="Myblog/about">About&nbsp&nbsp</a>
+        <a href="Myblog/diary">Diary&nbsp&nbsp</a>
+        <a href="Myblog/books">Books&nbsp&nbsp</a>
+        <a href="Myblog/projects">Projects</a>
+    </div>
+    <div class="mycontent">
+        {% if categories %}
+            <ul>
+                {% for category in categories %}
+                <li><a href="/Myblog/category/{{category.slug }}">{{ category.name }}</a></li>
+                {%  endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+            <p>
+                나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>나는 대파머리가 아니라 쿄로스케요!<br>
+                발명왕!<br>
+            </p>
+    </div>
+</div>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+</html>
